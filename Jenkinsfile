@@ -8,6 +8,14 @@ pipeline {
           echo "Multiple shell steps works too"
         '''
       }
+    }  
+    stage('Upload to AWS') {
+      steps {
+        retry(3) {
+          withAWS(region:'us-west-2', credentials: 'aws-static') {
+            s3Upload(file:'index.html', bucket:'mmd-jenkins', path:'index.html')
+          }
+        }  
     }
   }
 }  
