@@ -9,9 +9,9 @@ pipeline {
         '''
       }
     }  
-    stage('Upload to AWS') {
+    stage('Upload to AWS.') {
       steps {
-          withAWS(region:'us-west-2', credentials: 'aws-static') {
+          withAWS(region:'us-west-2', credentials:'aws-static') {
             s3Upload(file:'index.html', bucket:'mmd-jenkins', path:'index.html')
           }
         }  
