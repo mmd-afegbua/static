@@ -19,5 +19,7 @@ Follow these steps to install jenkins on your instance: https://aws.amazon.com/g
 3. AWS Credentials Plugin
 
 #### To create the pipeline
-Clone this repo by using the command: ```git clone https://github.com/mmd-afegbua/static.git```
-
+* Fork, create or,
+* Clone this repo by using the command: ```git clone https://github.com/mmd-afegbua/static.git```
+* Connect your Repo to Jenkins using BlueOcean UI
+* Trigger Build
